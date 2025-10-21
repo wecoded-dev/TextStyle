@@ -1,0 +1,412 @@
+// =============================================
+// ULTRA PREMIUM TEXT FORMATTING FRAMEWORK
+// The Pinnacle of Typographic Excellence
+// =============================================
+
+// ========== FOUNDATIONAL VARIABLES ==========
+$text-framework-prefix: 'ultra-txt' !default;
+$golden-ratio: 1.61803398875 !default;
+
+// Master Color Palette
+$master-colors: (
+  // Primary Classical Colors
+  'imperial-gold': #D4AF37,
+  'royal-purple': #7851A9,
+  'emerald-green': #046307,
+  'sapphire-blue': #0F52BA,
+  'ruby-red': #E0115F,
+  'ivory-cream': #F5F5DC,
+  'velvet-black': #0A0A0A,
+  'pearl-white': #F8F8FF,
+  
+  // Metallic Gradients
+  'gold-gradient': linear-gradient(135deg, #D4AF37, #FFD700, #FFEC8B),
+  'silver-gradient': linear-gradient(135deg, #C0C0C0, #E8E8E8, #F8F8FF),
+  'bronze-gradient': linear-gradient(135deg, #CD7F32, #E97451, #F8C471),
+  
+  // Premium Neutrals
+  'charcoal': #36454F,
+  'slate': #708090,
+  'parchment': #F5E6D3,
+  'vellum': #F5F5F0
+) !default;
+
+// Advanced Typography Scale (Golden Ratio Based)
+$master-type-scale: (
+  'micro': 0.618rem,
+  'tiny': 0.764rem,
+  'small': 0.945rem,
+  'base': 1rem,
+  'medium': 1.236rem,
+  'large': 1.528rem,
+  'xlarge': 1.889rem,
+  'xxlarge': 2.334rem,
+  'xxxlarge': 2.884rem,
+  'display': 3.564rem,
+  'hero': 4.405rem,
+  'majestic': 5.444rem,
+  'imperial': 6.729rem,
+  'colossal': 8.315rem
+) !default;
+
+// Premium Font Weights
+$master-font-weights: (
+  'hairline': 50,
+  'ultralight': 100,
+  'extralight': 150,
+  'light': 200,
+  'book': 250,
+  'normal': 300,
+  'medium': 350,
+  'semibold': 400,
+  'bold': 450,
+  'extrabold': 500,
+  'black': 550,
+  'ultrablack': 600,
+  'heavy': 650
+) !default;
+
+// ========== ADVANCED MIXINS ==========
+@mixin master-text-gradient($angle: 135deg, $colors: (#D4AF37, #FFD700, #FFEC8B)) {
+  background: linear-gradient($angle, $colors);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 200% 200%;
+  animation: masterGradientShift 6s ease infinite;
+}
+
+@mixin classical-illumination($color: #D4AF37, $blur: 15px) {
+  text-shadow: 
+    0 0 5px lighten($color, 20%),
+    0 0 10px lighten($color, 15%),
+    0 0 15px $color,
+    0 0 20px darken($color, 10%),
+    0 0 35px darken($color, 15%),
+    0 0 40px darken($color, 20%);
+}
+
+@mixin renaissance-emboss($depth: 3px, $shadow-color: rgba(0,0,0,0.3)) {
+  color: transparent;
+  background: inherit;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 
+    #{$depth} #{$depth} #{$depth} $shadow-color,
+    -#{$depth} -#{$depth} #{$depth} rgba(255,255,255,0.8);
+}
+
+@mixin calligraphic-stroke($width: 1px, $color: currentColor) {
+  -webkit-text-stroke: $width $color;
+  text-stroke: $width $color;
+  paint-order: stroke fill;
+}
+
+@mixin vintage-engraving($depth: 4) {
+  $shadows: ();
+  @for $i from 1 through $depth {
+    $shadow: #{$i}px #{$i}px 0 rgba(0,0,0,0.1);
+    $shadows: append($shadows, $shadow, comma);
+  }
+  text-shadow: $shadows;
+}
+
+@mixin holographic-effect {
+  background: linear-gradient(
+    45deg,
+    #ff0000, #ff9900, #ffff00, #00ff00, 
+    #00ffff, #0000ff, #9900ff, #ff00ff
+  );
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: holographicShift 8s ease infinite;
+}
+
+@mixin crystal-clear($opacity: 0.9) {
+  color: rgba(255,255,255,$opacity);
+  text-shadow: 
+    0 0 10px rgba(255,255,255,0.8),
+    0 0 20px rgba(255,255,255,0.6),
+    0 0 30px rgba(255,255,255,0.4);
+  backdrop-filter: blur(5px);
+}
+
+@mixin medieval-manuscript {
+  font-family: "Garamond", "Times New Roman", serif;
+  background: linear-gradient(to bottom, #F5E6D3 0%, #E8D9C5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+// ========== MASTER ANIMATIONS ==========
+@keyframes masterGradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes holographicShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes floatingMajesty {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+    text-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  50% { 
+    transform: translateY(-20px) rotate(1deg);
+    text-shadow: 0 25px 40px rgba(0,0,0,0.3);
+  }
+}
+
+@keyframes breathingLight {
+  0%, 100% { 
+    opacity: 0.8;
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+  }
+  50% { 
+    opacity: 1;
+    text-shadow: 0 0 40px rgba(212, 175, 55, 0.8),
+                 0 0 60px rgba(212, 175, 55, 0.6);
+  }
+}
+
+@keyframes typewriterClassic {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes fadeInMasterpiece {
+  0% { 
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+    filter: blur(10px);
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes textWave {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-10px) rotate(1deg); }
+  50% { transform: translateY(-5px) rotate(0deg); }
+  75% { transform: translateY(-10px) rotate(-1deg); }
+}
+
+// ========== CORE FRAMEWORK ==========
+.#{$text-framework-prefix} {
+  
+  // ===== MASTER TYPOGRAPHY SCALE =====
+  @each $size, $value in $master-type-scale {
+    &-#{$size} {
+      font-size: $value;
+      line-height: $value * $golden-ratio;
+    }
+  }
+  
+  // ===== PRECISION FONT WEIGHTS =====
+  @each $weight, $value in $master-font-weights {
+    &-#{$weight} {
+      font-weight: $value;
+    }
+  }
+  
+  // ===== PREMIUM COLOR SYSTEM =====
+  @each $color, $value in $master-colors {
+    &-#{$color} {
+      color: $value;
+    }
+  }
+  
+  // ===== ADVANCED TEXT EFFECTS =====
+  &-illuminated {
+    @include classical-illumination(#D4AF37);
+  }
+  
+  &-gold-glow {
+    @include classical-illumination(#FFD700, 25px);
+  }
+  
+  &-silver-glow {
+    @include classical-illumination(#C0C0C0, 20px);
+  }
+  
+  &-embossed {
+    @include renaissance-emboss(4px, rgba(0,0,0,0.4));
+  }
+  
+  &-engraved {
+    @include vintage-engraving(6);
+  }
+  
+  &-holographic {
+    @include holographic-effect;
+  }
+  
+  &-crystal {
+    @include crystal-clear(0.95);
+  }
+  
+  &-manuscript {
+    @include medieval-manuscript;
+  }
+  
+  &-calligraphic {
+    @include calligraphic-stroke(1.5px, #8B4513);
+    font-family: "Palatino", "Georgia", serif;
+  }
+  
+  &-gradient-master {
+    @include master-text-gradient(135deg, #667eea, #764ba2, #D4AF37);
+  }
+  
+  &-gradient-royal {
+    @include master-text-gradient(135deg, #7851A9, #D4AF37, #0F52BA);
+  }
+  
+  // ===== PROFESSIONAL ANIMATIONS =====
+  &-animate-majesty {
+    animation: floatingMajesty 6s ease-in-out infinite;
+  }
+  
+  &-animate-breathe {
+    animation: breathingLight 4s ease-in-out infinite;
+  }
+  
+  &-animate-typewriter {
+    overflow: hidden;
+    border-right: 3px solid #D4AF37;
+    white-space: nowrap;
+    animation: typewriterClassic 4s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+  
+  &-animate-masterpiece {
+    animation: fadeInMasterpiece 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  }
+  
+  &-animate-wave {
+    animation: textWave 3s ease-in-out infinite;
+    display: inline-block;
+  }
+  
+  // ===== CLASSICAL STYLES =====
+  &-baroque {
+    @extend .#{$text-framework-prefix}-xxlarge;
+    @extend .#{$text-framework-prefix}-gold-glow;
+    @extend .#{$text-framework-prefix}-animate-breathe;
+    font-family: "Garamond", "Times New Roman", serif;
+    letter-spacing: 0.1em;
+  }
+  
+  &-renaissance {
+    @extend .#{$text-framework-prefix}-large;
+    @extend .#{$text-framework-prefix}-gradient-royal;
+    @extend .#{$text-framework-prefix}-calligraphic;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  }
+  
+  &-victorian {
+    @extend .#{$text-framework-prefix}-xlarge;
+    @extend .#{$text-framework-prefix}-imperial-gold;
+    font-family: "Baskerville", "Georgia", serif;
+    text-decoration: underline;
+    text-decoration-color: #D4AF37;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 8px;
+  }
+  
+  &-art-nouveau {
+    @extend .#{$text-framework-prefix}-display;
+    @extend .#{$text-framework-prefix}-gradient-master;
+    @extend .#{$text-framework-prefix}-animate-wave;
+    font-family: "Didot", "Bodoni", serif;
+    font-style: italic;
+  }
+  
+  &-modern-minimal {
+    @extend .#{$text-framework-prefix}-medium;
+    @extend .#{$text-framework-prefix}-charcoal;
+    font-family: "Helvetica Neue", "Arial", sans-serif;
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+  }
+  
+  // ===== ADVANCED UTILITIES =====
+  &-perspective {
+    transform: perspective(1000px) rotateX(15deg);
+    transform-style: preserve-3d;
+  }
+  
+  &-reflection {
+    position: relative;
+    &::after {
+      content: attr(data-text);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      transform: scaleY(-1);
+      opacity: 0.3;
+      background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.3));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  
+  &-layered {
+    text-shadow: 
+      1px 1px 0 rgba(0,0,0,0.2),
+      2px 2px 0 rgba(0,0,0,0.15),
+      3px 3px 0 rgba(0,0,0,0.1),
+      4px 4px 0 rgba(0,0,0,0.05);
+  }
+}
+
+// ========== BLINK ANIMATION ==========
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #D4AF37; }
+}
+
+// ========== RESPONSIVE MASTERPIECE ==========
+@media (max-width: 768px) {
+  .#{$text-framework-prefix} {
+    &-responsive-majesty {
+      font-size: clamp(1.5rem, 8vw, 4rem);
+    }
+  }
+}
+
+// ========== DARK MODE EXCELLENCE ==========
+@media (prefers-color-scheme: dark) {
+  .#{$text-framework-prefix} {
+    &-auto-dark {
+      color: #E8E8E8;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    &-dark-illuminated {
+      @include classical-illumination(#FFD700, 30px);
+    }
+  }
+}
+
+// ========== PRINT PERFECTION ==========
+@media print {
+  .#{$text-framework-prefix} {
+    &-print-perfect {
+      color: #000000 !important;
+      text-shadow: none !important;
+      background: none !important;
+    }
+  }
+}
