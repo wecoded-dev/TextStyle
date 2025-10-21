@@ -1,0 +1,366 @@
+/* ============================================= */
+/* ULTRA PREMIUM TEXT FORMATTING FRAMEWORK */
+/* The Pinnacle of Typographic Excellence */
+/* ============================================= */
+
+@keyframes masterGradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes holographicShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes floatingMajesty {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+    text-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  50% { 
+    transform: translateY(-20px) rotate(1deg);
+    text-shadow: 0 25px 40px rgba(0,0,0,0.3);
+  }
+}
+
+@keyframes breathingLight {
+  0%, 100% { 
+    opacity: 0.8;
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+  }
+  50% { 
+    opacity: 1;
+    text-shadow: 0 0 40px rgba(212, 175, 55, 0.8),
+                 0 0 60px rgba(212, 175, 55, 0.6);
+  }
+}
+
+@keyframes typewriterClassic {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes fadeInMasterpiece {
+  0% { 
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+    filter: blur(10px);
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes textWave {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-10px) rotate(1deg); }
+  50% { transform: translateY(-5px) rotate(0deg); }
+  75% { transform: translateY(-10px) rotate(-1deg); }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #D4AF37; }
+}
+
+/* ========== CORE FRAMEWORK ========== */
+.ultra-txt-micro { font-size: 0.618rem; line-height: 1.0rem; }
+.ultra-txt-tiny { font-size: 0.764rem; line-height: 1.236rem; }
+.ultra-txt-small { font-size: 0.945rem; line-height: 1.528rem; }
+.ultra-txt-base { font-size: 1rem; line-height: 1.618rem; }
+.ultra-txt-medium { font-size: 1.236rem; line-height: 2.0rem; }
+.ultra-txt-large { font-size: 1.528rem; line-height: 2.472rem; }
+.ultra-txt-xlarge { font-size: 1.889rem; line-height: 3.056rem; }
+.ultra-txt-xxlarge { font-size: 2.334rem; line-height: 3.776rem; }
+.ultra-txt-xxxlarge { font-size: 2.884rem; line-height: 4.665rem; }
+.ultra-txt-display { font-size: 3.564rem; line-height: 5.765rem; }
+.ultra-txt-hero { font-size: 4.405rem; line-height: 7.125rem; }
+.ultra-txt-majestic { font-size: 5.444rem; line-height: 8.806rem; }
+.ultra-txt-imperial { font-size: 6.729rem; line-height: 10.883rem; }
+.ultra-txt-colossal { font-size: 8.315rem; line-height: 13.451rem; }
+
+.ultra-txt-hairline { font-weight: 50; }
+.ultra-txt-ultralight { font-weight: 100; }
+.ultra-txt-extralight { font-weight: 150; }
+.ultra-txt-light { font-weight: 200; }
+.ultra-txt-book { font-weight: 250; }
+.ultra-txt-normal { font-weight: 300; }
+.ultra-txt-medium { font-weight: 350; }
+.ultra-txt-semibold { font-weight: 400; }
+.ultra-txt-bold { font-weight: 450; }
+.ultra-txt-extrabold { font-weight: 500; }
+.ultra-txt-black { font-weight: 550; }
+.ultra-txt-ultrablack { font-weight: 600; }
+.ultra-txt-heavy { font-weight: 650; }
+
+.ultra-txt-imperial-gold { color: #D4AF37; }
+.ultra-txt-royal-purple { color: #7851A9; }
+.ultra-txt-emerald-green { color: #046307; }
+.ultra-txt-sapphire-blue { color: #0F52BA; }
+.ultra-txt-ruby-red { color: #E0115F; }
+.ultra-txt-ivory-cream { color: #F5F5DC; }
+.ultra-txt-velvet-black { color: #0A0A0A; }
+.ultra-txt-pearl-white { color: #F8F8FF; }
+.ultra-txt-gold-gradient { background: linear-gradient(135deg, #D4AF37, #FFD700, #FFEC8B); }
+.ultra-txt-silver-gradient { background: linear-gradient(135deg, #C0C0C0, #E8E8E8, #F8F8FF); }
+.ultra-txt-bronze-gradient { background: linear-gradient(135deg, #CD7F32, #E97451, #F8C471); }
+.ultra-txt-charcoal { color: #36454F; }
+.ultra-txt-slate { color: #708090; }
+.ultra-txt-parchment { color: #F5E6D3; }
+.ultra-txt-vellum { color: #F5F5F0; }
+
+.ultra-txt-illuminated {
+  text-shadow: 
+    0 0 5px #f4e4a6,
+    0 0 10px #f0d975,
+    0 0 15px #D4AF37,
+    0 0 20px #b8941f,
+    0 0 35px #a07d19,
+    0 0 40px #8a6914;
+}
+
+.ultra-txt-gold-glow {
+  text-shadow: 
+    0 0 5px #fff5cc,
+    0 0 10px #ffefaa,
+    0 0 15px #FFD700,
+    0 0 20px #e6c200,
+    0 0 35px #ccad00,
+    0 0 40px #b39700;
+}
+
+.ultra-txt-silver-glow {
+  text-shadow: 
+    0 0 5px #f0f0f0,
+    0 0 10px #e8e8e8,
+    0 0 15px #C0C0C0,
+    0 0 20px #a8a8a8,
+    0 0 35px #909090,
+    0 0 40px #787878;
+}
+
+.ultra-txt-embossed {
+  color: transparent;
+  background: inherit;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 
+    4px 4px 4px rgba(0,0,0,0.4),
+    -4px -4px 4px rgba(255,255,255,0.8);
+}
+
+.ultra-txt-engraved {
+  text-shadow: 
+    1px 1px 0 rgba(0,0,0,0.1),
+    2px 2px 0 rgba(0,0,0,0.1),
+    3px 3px 0 rgba(0,0,0,0.1),
+    4px 4px 0 rgba(0,0,0,0.1);
+}
+
+.ultra-txt-holographic {
+  background: linear-gradient(45deg, #ff0000, #ff9900, #ffff00, #00ff00, #00ffff, #0000ff, #9900ff, #ff00ff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: holographicShift 8s ease infinite;
+}
+
+.ultra-txt-crystal {
+  color: rgba(255,255,255,0.95);
+  text-shadow: 
+    0 0 10px rgba(255,255,255,0.8),
+    0 0 20px rgba(255,255,255,0.6),
+    0 0 30px rgba(255,255,255,0.4);
+  backdrop-filter: blur(5px);
+}
+
+.ultra-txt-manuscript {
+  font-family: "Garamond", "Times New Roman", serif;
+  background: linear-gradient(to bottom, #F5E6D3 0%, #E8D9C5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.ultra-txt-calligraphic {
+  -webkit-text-stroke: 1.5px #8B4513;
+  text-stroke: 1.5px #8B4513;
+  paint-order: stroke fill;
+  font-family: "Palatino", "Georgia", serif;
+}
+
+.ultra-txt-gradient-master {
+  background: linear-gradient(135deg, #667eea, #764ba2, #D4AF37);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 200% 200%;
+  animation: masterGradientShift 6s ease infinite;
+}
+
+.ultra-txt-gradient-royal {
+  background: linear-gradient(135deg, #7851A9, #D4AF37, #0F52BA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 200% 200%;
+  animation: masterGradientShift 6s ease infinite;
+}
+
+.ultra-txt-animate-majesty {
+  animation: floatingMajesty 6s ease-in-out infinite;
+}
+
+.ultra-txt-animate-breathe {
+  animation: breathingLight 4s ease-in-out infinite;
+}
+
+.ultra-txt-animate-typewriter {
+  overflow: hidden;
+  border-right: 3px solid #D4AF37;
+  white-space: nowrap;
+  animation: typewriterClassic 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.ultra-txt-animate-masterpiece {
+  animation: fadeInMasterpiece 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.ultra-txt-animate-wave {
+  animation: textWave 3s ease-in-out infinite;
+  display: inline-block;
+}
+
+.ultra-txt-baroque {
+  font-size: 2.334rem;
+  line-height: 3.776rem;
+  text-shadow: 
+    0 0 5px #f4e4a6,
+    0 0 10px #f0d975,
+    0 0 15px #D4AF37,
+    0 0 20px #b8941f,
+    0 0 35px #a07d19,
+    0 0 40px #8a6914;
+  animation: breathingLight 4s ease-in-out infinite;
+  font-family: "Garamond", "Times New Roman", serif;
+  letter-spacing: 0.1em;
+}
+
+.ultra-txt-renaissance {
+  font-size: 1.528rem;
+  line-height: 2.472rem;
+  background: linear-gradient(135deg, #7851A9, #D4AF37, #0F52BA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 200% 200%;
+  animation: masterGradientShift 6s ease infinite;
+  -webkit-text-stroke: 1.5px #8B4513;
+  text-stroke: 1.5px #8B4513;
+  paint-order: stroke fill;
+  font-family: "Palatino", "Georgia", serif;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.ultra-txt-victorian {
+  font-size: 1.889rem;
+  line-height: 3.056rem;
+  color: #D4AF37;
+  font-family: "Baskerville", "Georgia", serif;
+  text-decoration: underline;
+  text-decoration-color: #D4AF37;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+}
+
+.ultra-txt-art-nouveau {
+  font-size: 3.564rem;
+  line-height: 5.765rem;
+  background: linear-gradient(135deg, #667eea, #764ba2, #D4AF37);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 200% 200%;
+  animation: masterGradientShift 6s ease infinite;
+  animation: textWave 3s ease-in-out infinite;
+  display: inline-block;
+  font-family: "Didot", "Bodoni", serif;
+  font-style: italic;
+}
+
+.ultra-txt-modern-minimal {
+  font-size: 1.236rem;
+  line-height: 2.0rem;
+  color: #36454F;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  letter-spacing: 0.05em;
+  line-height: 1.8;
+}
+
+.ultra-txt-perspective {
+  transform: perspective(1000px) rotateX(15deg);
+  transform-style: preserve-3d;
+}
+
+.ultra-txt-reflection {
+  position: relative;
+}
+.ultra-txt-reflection::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: scaleY(-1);
+  opacity: 0.3;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.3));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ultra-txt-layered {
+  text-shadow: 
+    1px 1px 0 rgba(0,0,0,0.2),
+    2px 2px 0 rgba(0,0,0,0.15),
+    3px 3px 0 rgba(0,0,0,0.1),
+    4px 4px 0 rgba(0,0,0,0.05);
+}
+
+@media (max-width: 768px) {
+  .ultra-txt-responsive-majesty {
+    font-size: clamp(1.5rem, 8vw, 4rem);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .ultra-txt-auto-dark {
+    color: #E8E8E8;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  }
+  .ultra-txt-dark-illuminated {
+    text-shadow: 
+      0 0 5px #fff5cc,
+      0 0 10px #ffefaa,
+      0 0 15px #FFD700,
+      0 0 20px #e6c200,
+      0 0 35px #ccad00,
+      0 0 40px #b39700;
+  }
+}
+
+@media print {
+  .ultra-txt-print-perfect {
+    color: #000000 !important;
+    text-shadow: none !important;
+    background: none !important;
+  }
+}
